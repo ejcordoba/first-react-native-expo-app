@@ -7,6 +7,7 @@ import { AnimatedGameCard } from "./GameCard.jsx";
 import { Logo } from "./Logo.jsx";
 import { CircleInfoIcon } from "./Icons.jsx";
 import { styled } from "nativewind";
+import { Screen } from "./Screen.jsx";
 
 const StyledPressable = styled(Pressable);
 
@@ -20,17 +21,7 @@ export function Main() {
     });
   }, []);
   return (
-    <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <View className="flex-row justify-between items-center mb-4 mx-2">
-        <View>
-          <Logo />
-        </View>
-        <Link asChild href="/about">
-          <StyledPressable className={`active:opacity-80`}>
-            <CircleInfoIcon />
-          </StyledPressable>
-        </Link>
-      </View>
+    <Screen>
       {games.length === 0 ? (
         <ActivityIndicator color={"#fff"} size={"large"} />
       ) : (
@@ -42,6 +33,6 @@ export function Main() {
           )}
         />
       )}
-    </View>
+    </Screen>
   );
 }
