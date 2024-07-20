@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { View, StyleSheet, Text, Image, Animated } from "react-native";
 export function GameCard({ game }) {
   return (
-    <View key={game.slug} style={styles.card}>
+    <View className="bg-slate-500" key={game.slug}>
       <Image source={{ uri: game.image }} style={styles.image} />
       <Text style={styles.title}>{game.title}</Text>
       <Text style={styles.description}>{game.description}</Text>
