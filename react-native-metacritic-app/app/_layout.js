@@ -1,8 +1,7 @@
 import { Link, Stack } from "expo-router";
 import { View, Pressable } from "react-native";
-import { styled } from "nativewind";
-
 import { Logo } from "../components/Logo";
+import { styled } from "nativewind";
 import { CircleInfoIcon } from "../components/Icons";
 
 const StyledPressable = styled(Pressable);

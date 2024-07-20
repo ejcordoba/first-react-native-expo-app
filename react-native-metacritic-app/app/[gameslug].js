@@ -1,4 +1,3 @@
-import { Link } from "expo-router";
 import { ActivityIndicator, Image, ScrollView, Text, View } from "react-native";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { Screen } from "../components/Screen";
@@ -19,7 +18,7 @@ export default function Detail() {
     <Screen>
       <Stack.Screen
         options={{
-          headerStyle: { backgroundColor: "#ffee00" },
+          headerStyle: { backgroundColor: "#FFBD3F" },
           headerTintColor: "black",
           headerLeft: () => {},
           headerTitle: "Detalle del juego",
