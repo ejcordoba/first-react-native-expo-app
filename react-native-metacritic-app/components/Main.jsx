@@ -20,15 +20,17 @@ export function Main() {
     });
   }, []);
   return (
-    <View style={{ paddingTop: insets.top + 20, paddingBottom: insets.bottom }}>
-      <View style={{ marginBottom: 20 }}>
-        <Logo />
+    <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
+      <View className="flex-row justify-between items-center mb-4 mx-2">
+        <View>
+          <Logo />
+        </View>
+        <Link asChild href="/about">
+          <StyledPressable className={`active:opacity-80`}>
+            <CircleInfoIcon />
+          </StyledPressable>
+        </Link>
       </View>
-      <Link asChild href="/about">
-        <StyledPressable className={`active:opacity-80`}>
-          <CircleInfoIcon />
-        </StyledPressable>
-      </Link>
       {games.length === 0 ? (
         <ActivityIndicator color={"#fff"} size={"large"} />
       ) : (
